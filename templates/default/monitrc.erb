@@ -28,7 +28,7 @@ set alert <%= email %> NOT ON { action, instance, pid, ppid }
 <% end %>
 
 set httpd port <%= node[:monit][:port] %>
-  <%= "use address #{node[:monit][:address]}" if node[:monit][:address] %>
+  <%= "use address #{node[:monit][:address].nil? ? 'localhost' : node[:monit][:address] }" %>
 <% node[:monit][:allow].each do |a| %>
   allow <%= "#{a}" %>
 <% end %>
