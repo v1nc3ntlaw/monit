@@ -38,6 +38,7 @@ set httpd port <%= node[:monit][:port] %>
   ssl enable
   pemfile <%= node[:monit][:cert] %>
 <% end %>
+  signature disable
 
 include /etc/monit/conf.d/*.conf
 
