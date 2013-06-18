@@ -18,6 +18,7 @@ default[:monit][:mailserver][:password] = nil
 default[:monit][:mailserver][:password_suffix] = nil
 
 default[:monit][:port] = 3737
+default[:monit][:private] = true
 default[:monit][:address] = nil
 default[:monit][:ssl] = false
 default[:monit][:cert] = "/etc/monit/monit.pem"
